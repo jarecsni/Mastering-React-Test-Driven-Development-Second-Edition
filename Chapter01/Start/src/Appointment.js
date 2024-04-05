@@ -1,3 +1,3 @@
 import React from "react";
 
-export const Appointment = () => {};
+export const Appointment = () => (<div>Ashley</div>);

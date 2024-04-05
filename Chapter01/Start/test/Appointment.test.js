@@ -1,6 +1,7 @@
 import { Appointment } from '../src/Appointment';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { act } from 'react-dom/test-utils';
 
 describe('Appointment', () => {
     it('renders the customer first name', () => {
@@ -9,7 +10,9 @@ describe('Appointment', () => {
         const container = document.createElement('div');
         document.body.appendChild(container);
         const root = createRoot(container);
-        root.render(component);
+        act(() => {
+            root.render(component);
+        });
         expect(document.body.textContent).toContain('Ashley');
     });
 });
